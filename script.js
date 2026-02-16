@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom Cursor
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
-    
+
     if (window.innerWidth > 768) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            
+
             setTimeout(() => {
                 follower.style.left = e.clientX + 'px';
                 follower.style.top = e.clientY + 'px';
@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    
+
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
         menuToggle.classList.toggle('active');
-        
+
         // Animate burger menu
         const bars = document.querySelectorAll('.bar');
         if (nav.classList.contains('active')) {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
-            
+
             // Reset burger menu
             const bars = document.querySelectorAll('.bar');
             bars[0].style.transform = 'none';
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll Reveal Animation
     const sections = document.querySelectorAll('.section');
-    
+
     const revealSection = () => {
         const triggerBottom = window.innerHeight * 0.8;
-        
+
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
-            
+
             if (sectionTop < triggerBottom) {
                 section.style.opacity = '1';
                 section.style.transform = 'translateY(0)';
@@ -112,7 +112,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run once on load
     revealSection();
-    
+
     // Run on scroll
     window.addEventListener('scroll', revealSection);
+
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const workImages = document.querySelectorAll('.work-image img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    workImages.forEach(image => {
+        image.style.cursor = 'zoom-in';
+        image.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent other click events
+            lightboxImg.src = image.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Enable scroll
+    };
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', closeLightbox);
 });
