@@ -514,7 +514,7 @@ ul {
 }
 
 .gradient-1 {
-    background: linear-gradient(135deg, #FF6B6B, #556270);
+    background: linear-gradient(135deg, #0055b8 0%, #00aaff 100%);
 }
 
 .gradient-2 {
@@ -698,6 +698,42 @@ ul {
 
 .lightbox-close:hover {
     color: var(--primary-color);
+}
+
+.work-image {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.confidential-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.work-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.work-description small {
+    display: block;
+    margin-top: 10px;
+    opacity: 0.8;
 }
 
 /* Responsive */

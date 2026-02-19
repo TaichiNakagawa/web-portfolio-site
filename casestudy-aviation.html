@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | IT企業 公式サイト</title>
+    <meta name="description" content="IT企業の公式サイトにおける技術支援実績の詳細ページ。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        .case-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, rgba(0, 85, 184, 0.1) 0%, rgba(0, 170, 255, 0.1) 100%);
+        }
+
+        .case-meta {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .case-title {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .case-section {
+            margin-bottom: 50px;
+        }
+
+        .case-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .case-section h2::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .case-sidebar {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .sidebar-item {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-item h3 {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .back-link:hover .arrow {
+            transform: translateX(-5px);
+        }
+
+        .case-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #0055b8 0%, #00aaff 100%);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .case-title {
+                font-size: 2.5rem;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">PORTFOLIO.</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#works" class="nav-link">Works</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="case-hero">
+            <div class="container">
+                <a href="index.html#works" class="back-link">
+                    <span class="arrow">←</span> Back to Works
+                </a>
+                <p class="case-meta">Technical Support / Maintenance</p>
+                <h1 class="case-title">IT企業<br>公式サイト 技術支援</h1>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="case-image-placeholder">
+                    Technical Support & Maintenance
+                </div>
+
+                <div class="case-grid">
+                    <div class="case-content">
+                        <section class="case-section">
+                            <h2>Overview</h2>
+                            <p>
+                                IT領域におけるシステム開発をメインで展開する企業の公式サイト立ち上げにおいて、技術的な土台作りと運用サポートを担当しました。
+                            </p>
+                            <p style="margin-top: 20px;">
+                                初期の課題として、多様なデバイスからの閲覧を支えるレスポンシブ対応、および専門知識を持つ担当者がスムーズに情報を発信できる環境の構築が求められていました。
+                            </p>
+                        </section>
+
+                        <section class="case-section">
+                            <h2>Core Support</h2>
+                            <div style="margin-top: 30px;">
+                                <h3>01. レスポンシブ化の完遂</h3>
+                                <p>
+                                    既存のデスクトップ向けレイアウトを維持しつつ、スマートフォンやタブレットからの視認性を最適化しました。ITエンジニアが現場などの外出先からでも情報をキャッチできるよう、読みやすさに配慮した設計を行いました。
+                                </p>
+                            </div>
+                            <div style="margin-top: 30px;">
+                                <h3>02. ローカル開発環境の構築支援</h3>
+                                <p>
+                                    依頼主が自ら更新・修正をテストできるよう、local等を用いたローカル開発環境のセットアップを支援。本番環境に影響を与えずに検証できるフローを構築しました。
+                                </p>
+                            </div>
+                            <div style="margin-top: 30px;">
+                                <h3>03. 運用マニュアル作成とレクチャー</h3>
+                                <p>
+                                    「技術を渡して終わり」ではなく、継続的な運用を可能にするためにカスタマイズされたマニュアルを作成。電話対応や面談を通じ、技術的な不明点を解消する手厚い導入サポートを提供しました。
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="case-sidebar">
+                        <div class="sidebar-item">
+                            <h3>Role</h3>
+                            <p>Maintenance Support / Developer</p>
+                        </div>
+                        <div class="sidebar-item">
+                            <h3>Tech Stack</h3>
+                            <div class="tag-list">
+                                <span class="tag">HTML5 / CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Documentation</span>
+                                <span class="tag">WordPress</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-item">
+                            <h3>Challenge</h3>
+                            <p>
+                                専門性の高いサービスにふさわしい誠実なデザインを維持しつつ、技術的な不具合（画像表示のバグ等）を徹底的に排除しました。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
