@@ -62,7 +62,7 @@
         <section id="about" class="about section">
             <div class="container about-container">
                 <div class="about-image">
-                    <div class="image-placeholder"></div>
+                    <img src="images/resume.png" alt="Profile Photo" loading="lazy">
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">About Me</h2>
@@ -78,25 +78,64 @@
                     </p>
                     <div class="profile-info">
                         <div class="info-item">
-                            <span class="label">Location</span>
-                            <span class="value">Kanagawa / Shonan</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Born</span>
-                            <span class="value">1998.02.19</span>
+                            <span class="label">Certification</span>
+                            <ul class="value" style="font-size: 0.95rem; list-style: none; padding: 0;">
+                                <li>・基本情報技術者試験</li>
+                                <li>・ITパスポート試験</li>
+                                <li>・Illustrator®クリエイター能力認定試験 エキスパート</li>
+                                <li>・普通自動車第一種運転免許 (AT限定)</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skills">
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">HTML5/CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">WordPress</span>
-                        <span class="skill-tag">Photoshop</span>
-                        <span class="skill-tag">Illustrator</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">Antigravity</span>
+                    <div class="skills"
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px;">
+                        <div class="skill-group">
+                            <h4
+                                style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-family: var(--font-heading);">
+                                Profile</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span class="skill-tag"
+                                    style="border-color: rgba(255,255,255,0.2); font-size: 0.8rem; padding: 4px 12px; display: inline-flex; align-items: center;"><small
+                                        style="opacity: 0.6; margin-right: 4px;">Loc:</small> Kanagawa</span>
+                                <span class="skill-tag"
+                                    style="border-color: rgba(255,255,255,0.2); font-size: 0.8rem; padding: 4px 12px; display: inline-flex; align-items: center;"><small
+                                        style="opacity: 0.6; margin-right: 4px;">Born:</small> 1998.02.19</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4
+                                style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-family: var(--font-heading);">
+                                Tools & Style</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">Git /
+                                    GitHub</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">Antigravity</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">STUDIO</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4
+                                style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-family: var(--font-heading);">
+                                Design</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">UI/UX</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">Figma</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">PS / AI</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <h4
+                                style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-family: var(--font-heading);">
+                                Development</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">HTML / CSS</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">JS / React</span>
+                                <span class="skill-tag" style="font-size: 0.8rem; padding: 4px 12px;">WordPress</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,6 +233,14 @@
             <p>&copy; 2026 Portfolio. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
