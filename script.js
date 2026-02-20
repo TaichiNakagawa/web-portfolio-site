@@ -157,4 +157,53 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Reset status
+            formStatus.className = 'form-status';
+            formStatus.textContent = 'Sending...';
+            formStatus.style.display = 'block';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            try {
+                // NOTE: Using the user's actual Formspree endpoint
+                const response = await fetch('https://formspree.io/f/xbdaakro', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.classList.add('success');
+                    formStatus.textContent = 'ありがとうございます！メッセージは正常に送信されました。';
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        formStatus.textContent = data['errors'].map(error => error['message']).join(', ');
+                    } else {
+                        formStatus.textContent = 'エラーが発生しました。時間をおいて再度お試しください。';
+                    }
+                    formStatus.classList.add('error');
+                }
+            } catch (error) {
+                formStatus.classList.add('error');
+                formStatus.textContent = 'ネットワークエラーが発生しました。接続を確認してください。';
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    }
 });

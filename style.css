@@ -637,6 +637,34 @@ ul {
     background: rgba(100, 255, 218, 0.05);
 }
 
+.form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* Footer */
 .footer {
     padding: 40px 0;
