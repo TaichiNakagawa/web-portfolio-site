@@ -162,10 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
     const submitBtn = document.getElementById('submit-btn');
+    const privacyCheck = document.getElementById('privacy-check');
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            if (!privacyCheck.checked) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'プライバシーポリシーに同意してください。';
+                formStatus.style.display = 'block';
+                return;
+            }
 
             // Reset status
             formStatus.className = 'form-status';

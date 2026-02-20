@@ -660,6 +660,37 @@ ul {
     border: 1px solid #ff6b6b;
 }
 
+.privacy-policy {
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: none;
+    /* Keep custom cursor */
+    user-select: none;
+    gap: 12px;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 0;
+    cursor: none;
+}
+
+.policy-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.policy-link:hover {
+    color: var(--secondary-color);
+}
+
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
