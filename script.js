@@ -101,6 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.style.transform = 'translateY(0)';
             }
         });
+
+        // Timeline Items Animation
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            if (itemTop < triggerBottom) {
+                item.classList.add('visible');
+            }
+        });
     };
 
     // Initial styles for sections
